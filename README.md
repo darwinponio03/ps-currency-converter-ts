@@ -1,3 +1,8 @@
+# OUTPUT
+currency-conversion-OUTPUT.mov
+ps-currency-converter-ts/currency-conversion-OUTPUT.mov
+
+
 # ps-currency-converter-ts
 
 ## 📋 Challenge instructions
