@@ -7,7 +7,7 @@ import List from './List';
 import SwapVertical from '../svg/swap-vertical.svg';
 import Magnify from '../svg/magnify.svg';
 
-const CurrencyConversion = (props: any) => {
+const CurrencyConversion = () => {
     const [inputValue, setInputValue] = useState("");
     const [result, setResult] = useState(0);
     const [amount, setAmount] = useState(0);
