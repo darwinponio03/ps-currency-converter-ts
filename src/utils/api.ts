@@ -20,8 +20,6 @@ const api: API = ({ endpoint, params = {} }) => {
 export const fetchRates = async (baseCurrency: string) => {
   try {
     const response = await api({ endpoint: '/latest', params: { base: baseCurrency, apikey:API_KEY  } });
-    console.log('response',response);
-    
     const responseText = await response.text();
     const { rates, error } = JSON.parse(responseText);
 

@@ -9,8 +9,8 @@ import Magnify from '../svg/magnify.svg';
 
 const CurrencyConversion = (props: any) => {
     const [inputValue, setInputValue] = useState("");
-    let [result, setResult] = useState(0);
-    let [amount, setAmount] = useState(0);
+    const [result, setResult] = useState(0);
+    const [amount, setAmount] = useState(0);
     const [fromCurrency, setFromCurrency] = useState('');
     const [ToCurrency, setToCurrency] = useState('');
     const [show, setShow] = useState('');
@@ -78,7 +78,7 @@ const CurrencyConversion = (props: any) => {
             const { fromAmount, fromCurrency, toCurrency } = parseInput(inputValue);
             const rates = await fetchRates('USD');
 
-            // check if input text is has value
+            // check if the input text has a value
             if (inputValue) {
                 setFromCurrency(fromCurrency?.toUpperCase());
                 setToCurrency(toCurrency?.toUpperCase());
@@ -100,7 +100,6 @@ const CurrencyConversion = (props: any) => {
         <div className='container'>
             <div className='input-form'>
                 <input onChange={(e) => detectChange(e)} type='text' placeholder='e.g. 1 AUD to USD'></input>
-                {/* <button onClick={handleSubmit}>get rates</button> */}
                 <span onClick={handleSubmit}> <img src={Magnify} alt="Magnify"/></span>
             </div>
             {hasError ? <p className='error-msg'>{hasError}</p> : null}
@@ -110,11 +109,10 @@ const CurrencyConversion = (props: any) => {
                     <p className='result'>{result} {ToCurrency}</p>
                 </div>
                 <span onClick={handleSwitch}> <img src={SwapVertical} alt="SwapVertical" /></span>
-                {/* <button onClick={handleSwitch}>Switch</button> */}
             </div>
             <div className={`title ${show}`}>
                 <h4>Previous amounts</h4>
-                <a href="/#" onClick={clearAll}>Clear All</a>
+                <span onClick={clearAll}>Clear All</span>
             </div>
             {currencyList.map((currencyData: IcurrencyList, key: number) => {
                 return <List key={key} currencyData={currencyData} deleteCurrencyList={deleteCurrencyList} />

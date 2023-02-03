@@ -1,8 +1,3 @@
-input {
-    width: 100%;
-    height: 30px;
-}
-
 p {
     margin: 0;
     padding-bottom: 10px;
@@ -13,6 +8,11 @@ p {
     text-align: center;
     display: flex;
     justify-content: space-between;
+}
+
+.input-form input {
+    width: 100%;
+    height: 30px;
 }
 
 .input-form img {
@@ -84,4 +84,10 @@ p {
 .title a {
     text-decoration: none;
     color: black;
+}
+
+.title span,
+.display-value,
+.input-form span {
+    cursor: pointer;
 }

@@ -4,10 +4,10 @@ import { IcurrencyList } from '../utils/Interfaces';
 
 interface Props {
     currencyData: IcurrencyList;
-    deleteCurrencyList(listToDelete: number): void; 
+    deleteCurrencyList(listToDelete: number): void;
 }
 
-const List = ({currencyData, deleteCurrencyList}: Props) => {
+const List = ({ currencyData, deleteCurrencyList }: Props) => {
     return (
         <div>
             <div className='panel'>
@@ -17,8 +17,8 @@ const List = ({currencyData, deleteCurrencyList}: Props) => {
                 </div>
                 <div>
                     <a href="/#" onClick={() => {
-                        deleteCurrencyList(currencyData.uuid); 
-                    } }>Close</a>
+                        deleteCurrencyList(currencyData.uuid);
+                    }}>Close</a>
                 </div>
             </div>
         </div>
