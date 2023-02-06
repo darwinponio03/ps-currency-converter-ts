@@ -7,10 +7,10 @@ type ParseInput = (input: string) => {
 export const parseInput: ParseInput = (input) => {
   // expected input: 1 EUR to USD
   // TODO: parse or tokenize the input string
-
+  const splitInput = input.split(" ");
   return {
-    fromAmount: 0,
-    fromCurrency: '',
-    toCurrency: '',
+    fromAmount: Number(splitInput[0]),
+    fromCurrency: splitInput[1],
+    toCurrency: splitInput[3],
   };
 };

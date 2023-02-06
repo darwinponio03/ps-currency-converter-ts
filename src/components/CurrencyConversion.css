@@ -1,0 +1,93 @@
+p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.input-form {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-form input {
+    width: 100%;
+    height: 30px;
+}
+
+.input-form img {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    padding-top: 4px;
+    padding-right: 5px;
+}
+
+.input-form img:hover {
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(329deg) brightness(103%) contrast(103%);
+}
+
+.error-msg {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.display-value.show {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-value {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+    padding: 10px;
+    border: solid 1px;
+}
+
+.display-value p {
+    padding: 3px 0;
+}
+
+.display-value img {
+    width: 40px;
+    margin-top: 3px;
+}
+
+.inital-value {
+    font-size: 12px;
+}
+
+.result {
+    font-size: 20px;
+}
+
+.title {
+    display: none;
+    margin-top: 15px;
+}
+
+.title.show {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title h4 {
+    margin: 0;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.title span,
+.display-value,
+.input-form span {
+    cursor: pointer;
+}

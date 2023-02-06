@@ -1,13 +1,14 @@
 const BASE_URL = 'https://api.apilayer.com/exchangerates_data';
-const API_KEY = 'REPLACE_WITH_YOUR_API_KEY'
+const API_KEY = 'QwjJMdSIJyhdQNCKxvLeaQGFMebulDPt'
 
 // TODO: what is the response type in the Promise? We should avoid using 'any'
 type API = (params: {
   endpoint: string,
   params: {
     base?: string,
+    apikey?: string,
   },
-}) => Promise<any>;
+}) => Promise<Response>;
 
 const api: API = ({ endpoint, params = {} }) => {
   const searchParams = new URLSearchParams(params);
@@ -18,7 +19,7 @@ const api: API = ({ endpoint, params = {} }) => {
 
 export const fetchRates = async (baseCurrency: string) => {
   try {
-    const response = await api({ endpoint: '/latest', params: { base: baseCurrency } });
+    const response = await api({ endpoint: '/latest', params: { base: baseCurrency, apikey:API_KEY  } });
     const responseText = await response.text();
     const { rates, error } = JSON.parse(responseText);
 

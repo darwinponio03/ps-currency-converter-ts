@@ -1,0 +1,27 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.panel p {
+    padding: 3px 0;
+}
+
+.panel .prev-initial-value {
+    font-size: 12px;
+}
+
+.panel .prev-result {
+    font-size: 20px;
+}
